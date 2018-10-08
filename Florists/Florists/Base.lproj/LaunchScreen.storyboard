@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7" translatesAutoresizingMaskIntoConstraints="NO" id="vkH-n6-sdM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="a5R-HR-AQN"/>
+                                    <constraint firstAttribute="width" constant="375" id="vKg-L2-W0b"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHL-Wo-ocv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="527-uj-thm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Florists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkn-TN-lxK">
+                                <rect key="frame" x="129" y="310" width="116" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="W1x-qK-PeE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are the best florists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2U-9f-t2N">
+                                <rect key="frame" x="88" y="364" width="199" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="ZGg-H7-vYI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qHL-Wo-ocv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="90o-jM-a2x"/>
+                            <constraint firstItem="vkH-n6-sdM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E2a-df-GzR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k2U-9f-t2N" secondAttribute="trailing" constant="88" id="GfY-Qr-DhJ"/>
+                            <constraint firstItem="lkn-TN-lxK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="O6Z-EF-9AW"/>
+                            <constraint firstItem="k2U-9f-t2N" firstAttribute="top" secondItem="lkn-TN-lxK" secondAttribute="bottom" constant="8" id="RVZ-ly-jkM"/>
+                            <constraint firstItem="vkH-n6-sdM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UoK-jc-ZjS"/>
+                            <constraint firstItem="qHL-Wo-ocv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VOX-WY-V30"/>
+                            <constraint firstItem="vkH-n6-sdM" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ZAA-X5-0MS"/>
+                            <constraint firstItem="k2U-9f-t2N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="ctI-fr-bWL"/>
+                            <constraint firstItem="lkn-TN-lxK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="dBB-0j-EIb"/>
+                            <constraint firstItem="qHL-Wo-ocv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="mF9-FF-Lxd"/>
+                            <constraint firstItem="qHL-Wo-ocv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t5a-3S-EYI"/>
+                            <constraint firstItem="vkH-n6-sdM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uHg-3F-QCQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="7" width="600" height="338"/>
+    </resources>
+</document>
