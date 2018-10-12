@@ -19,22 +19,10 @@ class ViewController: UIViewController {
 	}
 
 	@IBAction func calculate(_ sender: Any) {
-		
-		let dinerValue = dinersTF.text;
-		let totalValue = totalCostTF.text;
-		
-		// Used optional binding because TF.text is optional
-		if let dinerStr = dinerValue, let totalStr = totalValue
+		// Combined all optional binding from last commit into one multiple unwrapping if...let
+		if let dinerStr = dinersTF.text, let totalStr = totalCostTF.text, let diner = Double(dinerStr), let total = Double(totalStr)
 		{
-			
-			let dinerDouble = Double(dinerStr);
-			let totalDouble = Double(totalStr);
-			
-			// Used optional binding because Double() returns an optional
-			if let diner = dinerDouble, let total = totalDouble
-			{
-				print(diner + total);
-			}
+			resultLbl.text = "\(total / diner)";
 		}
 		
 	}
