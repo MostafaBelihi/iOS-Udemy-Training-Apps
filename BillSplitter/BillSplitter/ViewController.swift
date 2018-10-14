@@ -22,7 +22,10 @@ class ViewController: UIViewController {
 		// Combined all optional binding from last commit into one multiple unwrapping if...let
 		if let dinerStr = dinersTF.text, let totalStr = totalCostTF.text, let diner = Double(dinerStr), let total = Double(totalStr)
 		{
-			resultLbl.text = "\(total / diner)";
+			let formattedCost = String(format: "%.2f", total / diner);
+			let formattedTotal = String(format: "%.2f", total);
+			
+			resultLbl.text = "The total cost of food is $\(formattedTotal)\n\nNumber of diners: \(Int(diner))\n\nEach diner pays: \(formattedCost)";
 		}
 		
 	}
