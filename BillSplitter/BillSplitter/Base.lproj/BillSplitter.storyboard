@@ -18,6 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYz-Jp-B0i">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIg-ql-pUF"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Splitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoD-gP-XLB">
                                 <rect key="frame" x="70.5" y="71" width="234" height="45.5"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="36"/>
@@ -92,12 +98,16 @@
                             <constraint firstItem="H9m-Sa-elR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jl2-9s-H4q"/>
                             <constraint firstItem="aoD-gP-XLB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="Ou8-S4-W9j"/>
                             <constraint firstItem="0AI-Kg-IXA" firstAttribute="top" secondItem="aoD-gP-XLB" secondAttribute="bottom" constant="21.5" id="VyG-a8-Jf2"/>
+                            <constraint firstItem="ZYz-Jp-B0i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YR5-Kb-bgI"/>
                             <constraint firstItem="0AI-Kg-IXA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dcV-0x-UAt"/>
                             <constraint firstItem="8RH-bc-X3D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gd2-tP-aNV"/>
                             <constraint firstItem="L0e-Tu-CKJ" firstAttribute="top" secondItem="H9m-Sa-elR" secondAttribute="bottom" constant="60" id="k80-R5-ElK"/>
                             <constraint firstItem="LRQ-pl-yHH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l86-tH-c1f"/>
                             <constraint firstItem="aoD-gP-XLB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pZ1-dK-a2H"/>
+                            <constraint firstItem="ZYz-Jp-B0i" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sQe-6A-VlC"/>
+                            <constraint firstItem="ZYz-Jp-B0i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sfp-Ct-3C2"/>
                             <constraint firstItem="d5f-j6-Qua" firstAttribute="top" secondItem="8RH-bc-X3D" secondAttribute="bottom" constant="7.5" id="t2a-78-9lM"/>
+                            <constraint firstItem="ZYz-Jp-B0i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wh4-XA-pgo"/>
                             <constraint firstItem="8RH-bc-X3D" firstAttribute="top" secondItem="LRQ-pl-yHH" secondAttribute="bottom" constant="19" id="wxv-YY-e5M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

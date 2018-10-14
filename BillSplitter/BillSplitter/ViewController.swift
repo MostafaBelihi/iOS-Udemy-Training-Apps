@@ -26,5 +26,10 @@ class ViewController: UIViewController {
 		}
 		
 	}
+	
+	@IBAction func dismissKeyboard(_ sender: Any) {
+		view.endEditing(true);
+	}
+	
 }
 
