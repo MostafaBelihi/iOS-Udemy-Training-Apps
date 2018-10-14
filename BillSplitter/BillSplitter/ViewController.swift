@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 	@IBOutlet weak var dinersTF: UITextField!
 	@IBOutlet weak var totalCostTF: UITextField!
-	@IBOutlet weak var resultLbl: UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -25,7 +24,7 @@ class ViewController: UIViewController {
 			let formattedCost = String(format: "%.2f", total / diner);
 			let formattedTotal = String(format: "%.2f", total);
 			
-			resultLbl.text = "The total cost of food is $\(formattedTotal)\n\nNumber of diners: \(Int(diner))\n\nEach diner pays: \(formattedCost)";
+			//resultLbl.text = "The total cost of food is $\(formattedTotal)\n\nNumber of diners: \(Int(diner))\n\nEach diner pays: \(formattedCost)";
 		}
 		
 	}

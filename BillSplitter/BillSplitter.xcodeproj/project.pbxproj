@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		064917E521738A6E00F46408 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064917E421738A6E00F46408 /* ResultsViewController.swift */; };
 		06CE32E12170E83300F7F898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CE32E02170E83300F7F898 /* AppDelegate.swift */; };
 		06CE32E32170E83300F7F898 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CE32E22170E83300F7F898 /* ViewController.swift */; };
 		06CE32E62170E83300F7F898 /* BillSplitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CE32E42170E83300F7F898 /* BillSplitter.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		064917E421738A6E00F46408 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		06CE32DD2170E83300F7F898 /* BillSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CE32E02170E83300F7F898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06CE32E22170E83300F7F898 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				06CE32E02170E83300F7F898 /* AppDelegate.swift */,
 				06CE32E22170E83300F7F898 /* ViewController.swift */,
 				06CE32E42170E83300F7F898 /* BillSplitter.storyboard */,
+				064917E421738A6E00F46408 /* ResultsViewController.swift */,
 				06CE32E72170E83400F7F898 /* Assets.xcassets */,
 				06CE32E92170E83400F7F898 /* LaunchScreen.storyboard */,
 				06CE32EC2170E83400F7F898 /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				06CE32E32170E83300F7F898 /* ViewController.swift in Sources */,
 				06CE32E12170E83300F7F898 /* AppDelegate.swift in Sources */,
+				064917E521738A6E00F46408 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
