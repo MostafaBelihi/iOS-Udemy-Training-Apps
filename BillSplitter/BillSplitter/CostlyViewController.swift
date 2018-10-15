@@ -9,11 +9,16 @@
 import UIKit
 
 class CostlyViewController: UIViewController {
-
+	@IBOutlet weak var titleLbl: UILabel!
+	@IBOutlet weak var resultLbl: UILabel!
+	var finalTextCostly = "";
+	var titleCostly = "";
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        resultLbl.text = finalTextCostly;
+		titleLbl.text = titleCostly;
     }
 
     override func didReceiveMemoryWarning() {

@@ -165,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="1249" y="-222"/>
         </scene>
-        <!--Results View Controller-->
+        <!--Costly View Controller-->
         <scene sceneID="lkO-GG-UU9">
             <objects>
-                <viewController id="8nz-wc-zfG" customClass="ResultsViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8nz-wc-zfG" customClass="CostlyViewController" customModule="BillSplitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZcB-UT-Rfd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,7 +218,8 @@
                         <viewLayoutGuide key="safeArea" id="YMi-Oc-w0X"/>
                     </view>
                     <connections>
-                        <outlet property="resultLbl" destination="JVy-bL-KrG" id="vrQ-MN-yYw"/>
+                        <outlet property="resultLbl" destination="JVy-bL-KrG" id="0Cv-7e-xQ1"/>
+                        <outlet property="titleLbl" destination="eQ4-It-CId" id="7ln-UN-gMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="287-Ys-jxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
