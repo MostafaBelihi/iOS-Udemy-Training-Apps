@@ -24,6 +24,7 @@ class ViewController: UIViewController {
 	}
 	
 	// Should segue execute? Good for validations
+	/* Commented: This function will not execute when calling segue from code, logic moved
 	override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
 		// Validate inputs, make calculations, allow sqgue
 		if let dinerStr = dinersTF.text, let totalStr = totalCostTF.text, let diner = Double(dinerStr), let total = Double(totalStr)
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
 		
 		return false;		// failed segue
 	}
+	*/
 	
 	// Executes immediately before performing the segue
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,6 +51,28 @@ class ViewController: UIViewController {
 		// Sending data to the target view
 		destinationVC.finalText = resultText;
 
+	}
+	
+	@IBAction func calculate(_ sender: Any) {
+		// Validate inputs, make calculations
+		if let dinerStr = dinersTF.text, let totalStr = totalCostTF.text, let diner = Double(dinerStr), let total = Double(totalStr)
+		{
+			let formattedCost = String(format: "%.2f", total / diner);
+			let formattedTotal = String(format: "%.2f", total);
+			
+			resultText = "The total cost of food is $\(formattedTotal)\n\nNumber of diners: \(Int(diner))\n\nEach diner pays: $\(formattedCost)";
+			
+			if total > 100
+			{
+				performSegue(withIdentifier: "costly", sender: self);
+			}
+			else
+			{
+				performSegue(withIdentifier: "cheap", sender: self);
+			}
+		}
+
+		
 	}
 	
 	// Unwind segue
