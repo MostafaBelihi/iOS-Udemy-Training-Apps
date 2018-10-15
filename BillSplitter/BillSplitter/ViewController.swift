@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 		view.endEditing(true);
 	}
 	
+	// Executes immediately before performing the segue
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
 		if let dinerStr = dinersTF.text, let totalStr = totalCostTF.text, let diner = Double(dinerStr), let total = Double(totalStr)
