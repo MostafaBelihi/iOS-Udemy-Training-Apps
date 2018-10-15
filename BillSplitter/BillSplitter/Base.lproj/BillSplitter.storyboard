@@ -139,7 +139,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="close:" destination="s7n-Vh-Ibx" eventType="touchUpInside" id="Qnb-MM-RhI"/>
+                                    <segue destination="mTF-eG-2Gq" kind="unwind" unwindAction="dismissVCWithSegue:" id="E7C-fk-Ysd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -159,6 +159,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DS5-2s-bp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mTF-eG-2Gq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1053.5999999999999" y="28.335832083958024"/>
         </scene>

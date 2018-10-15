@@ -19,9 +19,11 @@ class ResultsViewController: UIViewController {
 		resultLbl.text = finalText;
     }
 
+	/*
 	@IBAction func close(_ sender: Any) {
 		// Close the view (dismiss modal)
 		dismiss(animated: true, completion: nil)
 	}
+	*/
 	
 }
