@@ -20,6 +20,8 @@ class ResultsViewController: UIViewController {
     }
 
 	@IBAction func close(_ sender: Any) {
+		// Close the view (dismiss modal)
+		dismiss(animated: true, completion: nil)
 	}
 	
 }
