@@ -11,11 +11,12 @@ import UIKit
 class ResultsViewController: UIViewController {
 
 	@IBOutlet weak var resultLbl: UILabel!
+	var finalText = "";
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+		resultLbl.text = finalText;
     }
 
 	@IBAction func close(_ sender: Any) {
