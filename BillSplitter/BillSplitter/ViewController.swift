@@ -91,8 +91,14 @@ class ViewController: UIViewController {
 	// Unwind segue
 	@IBAction func dismissVC(segue: UIStoryboardSegue)
 	{
-		
 	}
 	
+	@IBAction func helpClicked(_ sender: Any) {
+		// Presenting a view from code without segue
+		if let helpVC = storyboard?.instantiateViewController(withIdentifier: "help")
+		{
+			present(helpVC, animated: true, completion: nil);
+		}
+	}
 }
 

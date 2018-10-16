@@ -78,6 +78,14 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adT-Z0-drg">
+                                <rect key="frame" x="171" y="552" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Help"/>
+                                <connections>
+                                    <action selector="helpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G8Z-ZI-eAB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -226,6 +234,60 @@
                 <exit id="QMG-p0-HV8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1249" y="577"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0Xo-pV-umg">
+            <objects>
+                <viewController storyboardIdentifier="help" id="mp5-Sg-a2k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HQc-Pr-6xy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to Use App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcp-cZ-IeE">
+                                <rect key="frame" x="16" y="73" width="343" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exs-Je-0iF">
+                                <rect key="frame" x="16" y="20" width="30" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="DWA-dP-WsU"/>
+                                    <constraint firstAttribute="height" constant="45" id="OBL-vb-187"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="h0r-v9-wtE" kind="unwind" unwindAction="dismissVCWithSegue:" id="3tO-KI-rrU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybQ-6A-Mpn">
+                                <rect key="frame" x="16" y="157" width="343" height="482"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <mutableString key="text">"The world's first quad camera smartphone". It does have a ring to it, doesn't it? Depending on how you tally up the snappers, that statement is true and unquestionably so, if you only consider the rear camera setup. Frankly, we can't exactly say we are too surprised. It was more or less a matter of time. But, if we had to place some predictions, our money would have definitely been on a more obscure manufacturer finally polling out the quad camera card, rather than Samsung.
+
+Samsung Galaxy A9 (2018) hands-on review
+Still, it does make a lot of sense. Hot on the heels of the Galaxy A7 (2018) and its triple camera setup, the A9 (2018) now adds a telephoto camera to the mix, bringing the total tally up to that all-important four. Or at least, until HMD finally comes through with a new multi-camera PureView handset, likely to be dubbed the Nokia 9, if rumors are to be believed.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39129336859332231" green="0.72197581839061298" blue="0.86127855329949243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="exs-Je-0iF" firstAttribute="top" secondItem="xm1-Si-OXA" secondAttribute="top" id="1Qg-Py-mP2"/>
+                            <constraint firstItem="exs-Je-0iF" firstAttribute="leading" secondItem="xm1-Si-OXA" secondAttribute="leading" constant="16" id="Vhp-s5-RY0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xm1-Si-OXA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiC-wm-FaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="h0r-v9-wtE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-898.39999999999998" y="-245.12743628185908"/>
         </scene>
     </scenes>
 </document>
