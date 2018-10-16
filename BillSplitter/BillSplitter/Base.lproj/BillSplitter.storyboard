@@ -80,7 +80,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adT-Z0-drg">
                                 <rect key="frame" x="171" y="552" width="32" height="30"/>
-                                <state key="normal" title="Help"/>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="helpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G8Z-ZI-eAB"/>
                                 </connections>
@@ -130,10 +132,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H9m-Sa-elR">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <rect key="frame" x="16" y="20" width="343" height="573"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="qpE-RR-neK"/>
-                                    <constraint firstAttribute="height" constant="627" id="rGg-Un-39P"/>
+                                    <constraint firstAttribute="height" constant="573" id="rGg-Un-39P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -153,13 +155,27 @@
                                     <segue destination="mTF-eG-2Gq" kind="unwind" unwindAction="dismissVCWithSegue:" id="E7C-fk-Ysd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ju-jX-ydU">
+                                <rect key="frame" x="171" y="617" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JPk-Ig-jkW"/>
+                                </constraints>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ErM-uR-q8X" kind="presentation" id="FeO-8h-VUf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xac-p8-F1a" firstAttribute="top" secondItem="Ls9-ap-pVm" secondAttribute="top" id="3wC-Xd-Dgk"/>
                             <constraint firstItem="Ls9-ap-pVm" firstAttribute="trailing" secondItem="H9m-Sa-elR" secondAttribute="trailing" constant="16" id="5Hw-ml-e2y"/>
                             <constraint firstItem="xac-p8-F1a" firstAttribute="leading" secondItem="Ls9-ap-pVm" secondAttribute="leading" constant="16" id="DUq-9W-l92"/>
-                            <constraint firstItem="Ls9-ap-pVm" firstAttribute="bottom" secondItem="H9m-Sa-elR" secondAttribute="bottom" constant="20" id="Ud8-12-efh"/>
+                            <constraint firstItem="Ls9-ap-pVm" firstAttribute="bottom" secondItem="7ju-jX-ydU" secondAttribute="bottom" constant="20" id="FR7-bm-myE"/>
+                            <constraint firstItem="7ju-jX-ydU" firstAttribute="centerX" secondItem="ywQ-ot-bhe" secondAttribute="centerX" id="I0m-7w-5QM"/>
+                            <constraint firstItem="Ls9-ap-pVm" firstAttribute="bottom" secondItem="H9m-Sa-elR" secondAttribute="bottom" constant="74" id="Ud8-12-efh"/>
                             <constraint firstItem="H9m-Sa-elR" firstAttribute="top" secondItem="Ls9-ap-pVm" secondAttribute="top" id="gXI-k4-Cqw"/>
                             <constraint firstItem="H9m-Sa-elR" firstAttribute="leading" secondItem="Ls9-ap-pVm" secondAttribute="leading" constant="16" id="i5a-H8-5xk"/>
                         </constraints>
@@ -172,7 +188,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DS5-2s-bp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="mTF-eG-2Gq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="29"/>
+            <point key="canvasLocation" x="1008.8" y="28.335832083958024"/>
+        </scene>
+        <!--Third-->
+        <scene sceneID="eo1-5R-QAz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Third" id="ErM-uR-q8X" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ha-Cn-zHK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="269"/>
         </scene>
         <!--Costly View Controller-->
         <scene sceneID="lkO-GG-UU9">

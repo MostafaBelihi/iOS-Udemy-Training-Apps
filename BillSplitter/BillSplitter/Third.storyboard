@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hLZ-az-hS0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="0Ct-H9-UBs">
+            <objects>
+                <viewController storyboardIdentifier="help" id="hLZ-az-hS0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Czg-Ao-CSV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Use App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JEK-nr-2Fy">
+                                <rect key="frame" x="49.5" y="83" width="276.5" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="vxP-Dk-k96"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFA-mT-qKC">
+                                <rect key="frame" x="16" y="147" width="343" height="385.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="jUM-Ym-9mM"/>
+                                </constraints>
+                                <string key="text">"The world's first quad camera smartphone". It does have a ring to it, doesn't it? Depending on how you tally up the snappers, that statement is true and unquestionably so, if you only consider the rear camera setup. Frankly, we can't exactly say we are too surprised. It was more or less a matter of time. But, if we had to place some predictions, our money would have definitely been on a more obscure manufacturer finally polling out the quad camera card, rather than Samsung.
+
+Samsung Galaxy A9 (2018) hands-on review
+Still, it does make a lot of sense. Hot on the heels of the Galaxy A7 (2018) and its triple camera setup, the A9 (2018) now adds a telephoto camera to the mix, bringing the total tally up to that all-important four.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyi-so-nxa">
+                                <rect key="frame" x="24" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fSq-xo-10a" kind="unwind" unwindAction="dismissVCWithSegue:" id="3Rt-1P-eZ8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.49720737850000002" blue="0.8478545368" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EFA-mT-qKC" firstAttribute="leading" secondItem="ddS-jc-d4v" secondAttribute="leading" constant="16" id="8s0-a7-Svh"/>
+                            <constraint firstItem="JEK-nr-2Fy" firstAttribute="centerX" secondItem="Czg-Ao-CSV" secondAttribute="centerX" id="J9u-CR-ylq"/>
+                            <constraint firstItem="ddS-jc-d4v" firstAttribute="trailing" secondItem="EFA-mT-qKC" secondAttribute="trailing" constant="16" id="P0S-WZ-qtb"/>
+                            <constraint firstItem="EFA-mT-qKC" firstAttribute="top" secondItem="JEK-nr-2Fy" secondAttribute="bottom" constant="8" id="Qtr-wp-rzF"/>
+                            <constraint firstItem="JEK-nr-2Fy" firstAttribute="top" secondItem="ddS-jc-d4v" secondAttribute="top" constant="63" id="aUo-77-TqE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ddS-jc-d4v"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rdj-Pd-yyx">
+                        <barButtonItem key="leftBarButtonItem" title="X" id="zmT-JZ-Uif">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="fSq-xo-10a" kind="unwind" unwindAction="dismissVCWithSegue:" id="yNz-er-Pje"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w6c-Ih-MhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fSq-xo-10a" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="-783"/>
+        </scene>
+    </scenes>
+</document>
