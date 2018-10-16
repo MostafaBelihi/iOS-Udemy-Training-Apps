@@ -95,7 +95,7 @@ class ViewController: UIViewController {
 	
 	@IBAction func helpClicked(_ sender: Any) {
 		// Presenting a view from code without segue
-		if let helpVC = storyboard?.instantiateViewController(withIdentifier: "help")
+		if let helpVC = storyboard?.instantiateViewController(withIdentifier: "nav")
 		{
 			present(helpVC, animated: true, completion: nil);
 		}
