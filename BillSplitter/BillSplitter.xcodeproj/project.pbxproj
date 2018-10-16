@@ -10,6 +10,7 @@
 		064917E521738A6E00F46408 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064917E421738A6E00F46408 /* ResultsViewController.swift */; };
 		064917E721748A3600F46408 /* CostlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064917E621748A3600F46408 /* CostlyViewController.swift */; };
 		064D6F7021759C3E00CB47E3 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064D6F6F21759C3E00CB47E3 /* FinishViewController.swift */; };
+		064D6F752175A5B600CB47E3 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064D6F742175A5B600CB47E3 /* Help.storyboard */; };
 		06CE32E12170E83300F7F898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CE32E02170E83300F7F898 /* AppDelegate.swift */; };
 		06CE32E32170E83300F7F898 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CE32E22170E83300F7F898 /* ViewController.swift */; };
 		06CE32E62170E83300F7F898 /* BillSplitter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CE32E42170E83300F7F898 /* BillSplitter.storyboard */; };
@@ -21,6 +22,7 @@
 		064917E421738A6E00F46408 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		064917E621748A3600F46408 /* CostlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostlyViewController.swift; sourceTree = "<group>"; };
 		064D6F6F21759C3E00CB47E3 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		064D6F742175A5B600CB47E3 /* Help.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		06CE32DD2170E83300F7F898 /* BillSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BillSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CE32E02170E83300F7F898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06CE32E22170E83300F7F898 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				06CE32E02170E83300F7F898 /* AppDelegate.swift */,
 				06CE32E22170E83300F7F898 /* ViewController.swift */,
 				06CE32E42170E83300F7F898 /* BillSplitter.storyboard */,
+				064D6F742175A5B600CB47E3 /* Help.storyboard */,
 				064917E421738A6E00F46408 /* ResultsViewController.swift */,
 				064917E621748A3600F46408 /* CostlyViewController.swift */,
 				064D6F6F21759C3E00CB47E3 /* FinishViewController.swift */,
@@ -134,6 +137,7 @@
 				06CE32EB2170E83400F7F898 /* LaunchScreen.storyboard in Resources */,
 				06CE32E82170E83400F7F898 /* Assets.xcassets in Resources */,
 				06CE32E62170E83300F7F898 /* BillSplitter.storyboard in Resources */,
+				064D6F752175A5B600CB47E3 /* Help.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
