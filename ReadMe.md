@@ -11,4 +11,4 @@ Video number is added at the beginning of commit title as follows:
 
 "V.150"
 
-Anu additional may be added to commit message.
+Any additional may be added to commit message.
