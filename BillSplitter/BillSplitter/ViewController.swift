@@ -45,20 +45,24 @@ class ViewController: UIViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
 		// Distinguish segue that fired this method by identifier
-		if let iddentifier = segue.identifier
+		if let identifier = segue.identifier
 		{
-			if iddentifier == "cheap"
+			if identifier == "cheap"
 			{
-				/// Pass data to next view
-				// Accessing the target view of segue
-				// We user downcatsing here to cast return of segue.destination to our preferred ViewContoller
-				let destinationVC = segue.destination as! ResultsViewController;
-				// Sending data to the target view
+				// Get access to a ViewController within a NavigationController
+				let navController = segue.destination as! UINavigationController;
+				let destinationVC = navController.topViewController as! ResultsViewController;	// get the top view controller in the NavController
+
 				destinationVC.finalText = resultText;
 			}
 			else
 			{
+				/// Pass data to next view
+				// Accessing the target view of segue
+				// We user downcatsing here to cast return of segue.destination to our preferred ViewContoller
 				let destinationVC = segue.destination as! CostlyViewController;
+
+				// Sending data to the target view
 				destinationVC.finalTextCostly = resultText;
 				destinationVC.titleCostly = "Your dinner is expensive!";
 			}
