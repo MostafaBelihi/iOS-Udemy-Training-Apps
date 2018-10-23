@@ -119,13 +119,13 @@
         <!--Setting-->
         <scene sceneID="0Wt-da-BYt">
             <objects>
-                <viewController id="yjT-yQ-XKe" sceneMemberID="viewController">
+                <viewController id="yjT-yQ-XKe" customClass="SettingsViewController" customModule="MyQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6hG-7s-OD9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg7-1b-Lbo">
-                                <rect key="frame" x="150" y="68" width="75" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg7-1b-Lbo">
+                                <rect key="frame" x="144.5" y="68" width="86" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -140,6 +140,9 @@
                                     <segment title="Light"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentedChanged:" destination="yjT-yQ-XKe" eventType="valueChanged" id="Vxm-vg-JYN"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjb-fg-oda">
                                 <rect key="frame" x="112" y="155" width="150" height="21"/>
@@ -152,6 +155,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="4JW-bo-jnb"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="switchChanged:" destination="yjT-yQ-XKe" eventType="valueChanged" id="ftc-9T-r5D"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Border" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vi-mC-EP5">
                                 <rect key="frame" x="136" y="257" width="103" height="21"/>
@@ -193,6 +199,15 @@
                         <viewLayoutGuide key="safeArea" id="n1t-lY-fAt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Setting" image="setting" id="cVf-F6-Pnp"/>
+                    <connections>
+                        <outlet property="segmentedTheme" destination="KLS-vE-IH7" id="1cm-Ma-Hy4"/>
+                        <outlet property="stepper" destination="ggC-84-YSP" id="MAn-tq-H5X"/>
+                        <outlet property="switchBorder" destination="q7T-SK-pXo" id="kRV-Wp-hhg"/>
+                        <outletCollection property="labels" destination="Kg7-1b-Lbo" collectionClass="NSMutableArray" id="NpJ-mD-a0c"/>
+                        <outletCollection property="labels" destination="jjb-fg-oda" collectionClass="NSMutableArray" id="Jwk-Kd-ruH"/>
+                        <outletCollection property="labels" destination="9vi-mC-EP5" collectionClass="NSMutableArray" id="0Nc-GV-TTj"/>
+                        <outletCollection property="labels" destination="Uvo-hd-r2k" collectionClass="NSMutableArray" id="VGj-kr-xn7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuu-Gk-Vdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

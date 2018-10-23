@@ -8,6 +8,8 @@
 
 import UIKit
 
+var theme: UIColor = UIColor.black;		// global theme
+
 class HomeViewController: UIViewController {
 	@IBOutlet weak var quoteImg: UIImageView!
 	
@@ -21,6 +23,13 @@ class HomeViewController: UIViewController {
 			quotes.append(String(i));
 		}
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated);
+		
+		// Apply theme
+		self.view.backgroundColor = theme;
+	}
 
 	@IBAction func backClicked(_ sender: Any) {
 		arrayIndex -= 1;

@@ -21,6 +21,9 @@ class FavoriteViewController: UIViewController {
 		
 		let indexSaved = UserDefaults.standard.integer(forKey: "favorite");
 		favoriteImg.image = UIImage(named: String(indexSaved));
+		
+		// Apply theme
+		self.view.backgroundColor = theme;
 	}
 
 }
