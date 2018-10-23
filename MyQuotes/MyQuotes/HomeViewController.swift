@@ -40,4 +40,9 @@ class HomeViewController: UIViewController {
 		quoteImg.image = UIImage(named: quotes[arrayIndex]);
 	}
 
+	@IBAction func favoriteClicked(_ sender: Any) {
+		let defaults = UserDefaults.standard
+		defaults.set(arrayIndex, forKey: "favorite");
+	}
+	
 }

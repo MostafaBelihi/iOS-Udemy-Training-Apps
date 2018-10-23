@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		062359F2217A02FB00D7EBBF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062359F1217A02FB00D7EBBF /* HomeViewController.swift */; };
+		06252D45217F458F007DEC91 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06252D44217F458F007DEC91 /* FavoriteViewController.swift */; };
 		06BBDDC22177950500DB8892 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BBDDC12177950500DB8892 /* AppDelegate.swift */; };
 		06BBDDC92177950500DB8892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BBDDC72177950500DB8892 /* Main.storyboard */; };
 		06BBDDCB2177950700DB8892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BBDDCA2177950700DB8892 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		062359F1217A02FB00D7EBBF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		06252D44217F458F007DEC91 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		06BBDDBE2177950500DB8892 /* MyQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BBDDC12177950500DB8892 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06BBDDC82177950500DB8892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				06BBDDCC2177950700DB8892 /* LaunchScreen.storyboard */,
 				06BBDDCF2177950700DB8892 /* Info.plist */,
 				062359F1217A02FB00D7EBBF /* HomeViewController.swift */,
+				06252D44217F458F007DEC91 /* FavoriteViewController.swift */,
 			);
 			path = MyQuotes;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06BBDDC22177950500DB8892 /* AppDelegate.swift in Sources */,
+				06252D45217F458F007DEC91 /* FavoriteViewController.swift in Sources */,
 				062359F2217A02FB00D7EBBF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
