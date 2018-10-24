@@ -11,6 +11,10 @@ import UIKit
 class FavoriteViewController: UIViewController {
 	@IBOutlet weak var favoriteImg: UIImageView!
 	
+	@IBOutlet var labels: [UILabel]!
+	
+	let defaults = UserDefaults.standard;
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,11 +23,42 @@ class FavoriteViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated);
 		
-		let indexSaved = UserDefaults.standard.integer(forKey: "favorite");
+		let indexSaved = defaults.integer(forKey: "favorite");
 		favoriteImg.image = UIImage(named: String(indexSaved));
 		
 		// Apply theme
-		self.view.backgroundColor = theme;
+		let themeValue = defaults.integer(forKey: "theme");
+		
+		if themeValue == 0
+		{
+			theme = UIColor.black;
+		}
+		else
+		{
+			theme = UIColor.white;
+		}
+		
+		applyTheme(theme: theme);
+	}
+	
+	func applyTheme(theme: UIColor)
+	{
+		view.backgroundColor = theme;
+		
+		var foreColor: UIColor;
+		
+		if theme == UIColor.black
+		{
+			foreColor = UIColor.white;
+		}
+		else
+		{
+			foreColor = UIColor.black;
+		}
+		
+		for label in labels {
+			label.textColor = foreColor;
+		}
 	}
 
 }

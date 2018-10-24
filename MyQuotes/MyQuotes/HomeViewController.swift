@@ -13,6 +13,8 @@ var theme: UIColor = UIColor.black;		// global theme
 class HomeViewController: UIViewController {
 	@IBOutlet weak var quoteImg: UIImageView!
 	
+	let defaults = UserDefaults.standard;
+	
 	var quotes = [String]();
 	var arrayIndex = 0;
 	
@@ -28,6 +30,17 @@ class HomeViewController: UIViewController {
 		super.viewWillAppear(animated);
 		
 		// Apply theme
+		let themeValue = defaults.integer(forKey: "theme");
+
+		if themeValue == 0
+		{
+			theme = UIColor.black;
+		}
+		else
+		{
+			theme = UIColor.white;
+		}
+
 		self.view.backgroundColor = theme;
 	}
 
@@ -50,7 +63,6 @@ class HomeViewController: UIViewController {
 	}
 
 	@IBAction func favoriteClicked(_ sender: Any) {
-		let defaults = UserDefaults.standard
 		defaults.set(arrayIndex, forKey: "favorite");
 	}
 	

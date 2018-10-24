@@ -110,6 +110,7 @@
                     <tabBarItem key="tabBarItem" title="Favorite" image="star" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="favoriteImg" destination="vI7-LQ-yB8" id="Ite-RW-Ur6"/>
+                        <outletCollection property="labels" destination="fL8-ZD-YlX" collectionClass="NSMutableArray" id="z0H-0L-jht"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

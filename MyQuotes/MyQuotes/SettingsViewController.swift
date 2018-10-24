@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+	
 	@IBOutlet var labels: [UILabel]!
 	
 	@IBOutlet weak var segmentedTheme: UISegmentedControl!
@@ -18,47 +18,77 @@ class SettingsViewController: UIViewController {
 	
 	@IBOutlet weak var stepper: UIStepper!
 	
+	let defaults = UserDefaults.standard;
+	
 	override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+		super.viewDidLoad()
+		
+		// Do any additional setup after loading the view.
+	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated);
 		
 		// Apply theme
-		self.view.backgroundColor = theme;
-	}
-
-	@IBAction func segmentedChanged(_ sender: Any) {
-		// Change theme
-		if segmentedTheme.selectedSegmentIndex == 0
+		let themeValue = defaults.integer(forKey: "theme");
+		
+		if themeValue == 0
 		{
 			theme = UIColor.black;
-			
-			for label in labels {
-				label.textColor = UIColor.white;
-			}
-			segmentedTheme.tintColor = UIColor.white;
-			switchBorder.tintColor = UIColor.white;
-			stepper.tintColor = UIColor.white;
 		}
-		else {
+		else
+		{
 			theme = UIColor.white;
-
-			for label in labels {
-				label.textColor = UIColor.black;
-			}
-			segmentedTheme.tintColor = UIColor.black;
-			switchBorder.tintColor = UIColor.black;
-			stepper.tintColor = UIColor.black;
 		}
 		
-		view.backgroundColor = theme;
+		applyTheme(theme: theme);
+		
+		// Impact segmenter value
+		segmentedTheme.selectedSegmentIndex = themeValue;
 	}
+	
+	@IBAction func segmentedChanged(_ sender: Any) {
+		// Change theme
+		let themeValue = segmentedTheme.selectedSegmentIndex;
+		defaults.set(themeValue, forKey: "theme");		// save theme
+		
+		if themeValue == 0
+		{
+			theme = UIColor.black;
+		}
+		else
+		{
+			theme = UIColor.white;
+		}
 
+		applyTheme(theme: theme);
+	}
+	
 	@IBAction func switchChanged(_ sender: Any) {
+	}
+	
+	func applyTheme(theme: UIColor)
+	{
+		view.backgroundColor = theme;
+		
+		var foreColor: UIColor;
+		
+		if theme == UIColor.black
+		{
+			foreColor = UIColor.white;
+		}
+		else
+		{
+			foreColor = UIColor.black;
+		}
+		
+		for label in labels {
+			label.textColor = foreColor;
+		}
+
+		segmentedTheme.tintColor = foreColor;
+		switchBorder.tintColor = foreColor;
+		stepper.tintColor = foreColor;
 	}
 	
 	
