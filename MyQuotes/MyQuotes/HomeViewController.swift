@@ -8,12 +8,14 @@
 
 import UIKit
 
+let defaults = UserDefaults.standard;
 var theme: UIColor = UIColor.black;		// global theme
+var imageBorder = false;
 
 class HomeViewController: UIViewController {
+
 	@IBOutlet weak var quoteImg: UIImageView!
 	
-	let defaults = UserDefaults.standard;
 	
 	var quotes = [String]();
 	var arrayIndex = 0;
@@ -29,9 +31,9 @@ class HomeViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated);
 		
-		// Apply theme
+		// Read defaults
 		let themeValue = defaults.integer(forKey: "theme");
-
+		
 		if themeValue == 0
 		{
 			theme = UIColor.black;
@@ -41,7 +43,9 @@ class HomeViewController: UIViewController {
 			theme = UIColor.white;
 		}
 
-		self.view.backgroundColor = theme;
+		imageBorder = defaults.bool(forKey: "imageBorder");
+
+		applyTheme();
 	}
 
 	@IBAction func backClicked(_ sender: Any) {
@@ -65,5 +69,35 @@ class HomeViewController: UIViewController {
 	@IBAction func favoriteClicked(_ sender: Any) {
 		defaults.set(arrayIndex, forKey: "favorite");
 	}
+	
+	func applyTheme()
+	{
+		// Reverse color
+		var foreColor: UIColor;
+		
+		if theme == UIColor.black
+		{
+			foreColor = UIColor.white;
+		}
+		else
+		{
+			foreColor = UIColor.black;
+		}
+		
+		// Apply Theme
+		view.backgroundColor = theme;
+		
+		// Image borders
+		if imageBorder
+		{
+			quoteImg.layer.borderColor = foreColor.cgColor;
+			quoteImg.layer.borderWidth = 5.0;
+		}
+		else
+		{
+			quoteImg.layer.borderWidth = 0;
+		}
+	}
+
 	
 }

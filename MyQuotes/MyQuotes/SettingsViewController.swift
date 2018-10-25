@@ -18,8 +18,6 @@ class SettingsViewController: UIViewController {
 	
 	@IBOutlet weak var stepper: UIStepper!
 	
-	let defaults = UserDefaults.standard;
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -29,7 +27,7 @@ class SettingsViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated);
 		
-		// Apply theme
+		// Read defaults
 		let themeValue = defaults.integer(forKey: "theme");
 		
 		if themeValue == 0
@@ -41,10 +39,13 @@ class SettingsViewController: UIViewController {
 			theme = UIColor.white;
 		}
 		
-		applyTheme(theme: theme);
+		imageBorder = defaults.bool(forKey: "imageBorder");
 		
-		// Impact segmenter value
+		applyTheme();
+
+		// Impact settings controls
 		segmentedTheme.selectedSegmentIndex = themeValue;
+		switchBorder.isOn = imageBorder;
 	}
 	
 	@IBAction func segmentedChanged(_ sender: Any) {
@@ -61,16 +62,18 @@ class SettingsViewController: UIViewController {
 			theme = UIColor.white;
 		}
 
-		applyTheme(theme: theme);
+		applyTheme();
 	}
 	
 	@IBAction func switchChanged(_ sender: Any) {
+		// Capture value from boolean isOn
+		imageBorder = switchBorder.isOn;
+		defaults.set(imageBorder, forKey: "imageBorder");
 	}
 	
-	func applyTheme(theme: UIColor)
+	func applyTheme()
 	{
-		view.backgroundColor = theme;
-		
+		// Reverse color
 		var foreColor: UIColor;
 		
 		if theme == UIColor.black
@@ -81,6 +84,9 @@ class SettingsViewController: UIViewController {
 		{
 			foreColor = UIColor.black;
 		}
+		
+		// Apply Theme
+		view.backgroundColor = theme;
 		
 		for label in labels {
 			label.textColor = foreColor;

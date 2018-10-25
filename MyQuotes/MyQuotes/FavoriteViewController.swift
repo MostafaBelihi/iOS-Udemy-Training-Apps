@@ -13,8 +13,6 @@ class FavoriteViewController: UIViewController {
 	
 	@IBOutlet var labels: [UILabel]!
 	
-	let defaults = UserDefaults.standard;
-	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,8 +23,8 @@ class FavoriteViewController: UIViewController {
 		
 		let indexSaved = defaults.integer(forKey: "favorite");
 		favoriteImg.image = UIImage(named: String(indexSaved));
-		
-		// Apply theme
+
+		// Read defaults
 		let themeValue = defaults.integer(forKey: "theme");
 		
 		if themeValue == 0
@@ -38,13 +36,14 @@ class FavoriteViewController: UIViewController {
 			theme = UIColor.white;
 		}
 		
-		applyTheme(theme: theme);
+		imageBorder = defaults.bool(forKey: "imageBorder");
+		
+		applyTheme();
 	}
 	
-	func applyTheme(theme: UIColor)
+	func applyTheme()
 	{
-		view.backgroundColor = theme;
-		
+		// Reverse color
 		var foreColor: UIColor;
 		
 		if theme == UIColor.black
@@ -56,8 +55,22 @@ class FavoriteViewController: UIViewController {
 			foreColor = UIColor.black;
 		}
 		
+		// Apply Theme
+		view.backgroundColor = theme;
+
 		for label in labels {
 			label.textColor = foreColor;
+		}
+		
+		// Image borders
+		if imageBorder
+		{
+			favoriteImg.layer.borderColor = foreColor.cgColor;
+			favoriteImg.layer.borderWidth = 5.0;
+		}
+		else
+		{
+			favoriteImg.layer.borderWidth = 0;
 		}
 	}
 
