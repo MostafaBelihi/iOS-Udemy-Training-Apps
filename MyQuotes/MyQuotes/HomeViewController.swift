@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
 
 	@IBOutlet weak var quoteImg: UIImageView!
 	
+	@IBOutlet var buttons: [UIButton]!
 	
 	var quotes = [String]();
 	var arrayIndex = 0;
@@ -87,6 +88,12 @@ class HomeViewController: UIViewController {
 		// Apply Theme
 		view.backgroundColor = theme;
 		
+		for button in buttons {
+			button.layer.cornerRadius = 32.0;
+			button.layer.borderWidth = 3.5;
+			button.layer.borderColor = foreColor.cgColor;
+		}
+
 		// Image borders
 		if imageBorder
 		{
@@ -97,6 +104,9 @@ class HomeViewController: UIViewController {
 		{
 			quoteImg.layer.borderWidth = 0;
 		}
+		
+		quoteImg.clipsToBounds = true;
+		quoteImg.layer.cornerRadius = 5.0;
 	}
 
 	

@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="x8d-aG-A05">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="x8d-aG-A05">
                                 <rect key="frame" x="16" y="38" width="343" height="405"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="405" id="VUM-eu-5Ht"/>
@@ -72,6 +72,8 @@
                     <tabBarItem key="tabBarItem" title="Quotes" image="quote" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="quoteImg" destination="x8d-aG-A05" id="RaE-an-O2Z"/>
+                        <outletCollection property="buttons" destination="2Xb-fV-TJ8" collectionClass="NSMutableArray" id="wTB-Js-08G"/>
+                        <outletCollection property="buttons" destination="Y3m-VS-RO8" collectionClass="NSMutableArray" id="BZr-Hb-KOH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

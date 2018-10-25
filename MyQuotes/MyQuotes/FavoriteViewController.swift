@@ -72,6 +72,9 @@ class FavoriteViewController: UIViewController {
 		{
 			favoriteImg.layer.borderWidth = 0;
 		}
+
+		favoriteImg.clipsToBounds = true;
+		favoriteImg.layer.cornerRadius = 5.0;
 	}
 
 }
