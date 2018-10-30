@@ -168,7 +168,67 @@
                     <view key="view" contentMode="scaleToFill" id="6sN-h4-R3Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ure-lZ-CW6">
+                                <rect key="frame" x="40" y="104" width="295" height="55"/>
+                                <state key="normal" title="button"/>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xho-Hr-UOi">
+                                <rect key="frame" x="40" y="175" width="295" height="54"/>
+                                <state key="normal" title="button"/>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hq-5p-C4H">
+                                <rect key="frame" x="40" y="245" width="295" height="55"/>
+                                <state key="normal" title="button"/>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW9-4Q-UMu">
+                                <rect key="frame" x="40" y="316" width="295" height="54"/>
+                                <state key="normal" title="button"/>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjn-V9-DV1">
+                                <rect key="frame" x="40" y="386" width="295" height="55"/>
+                                <state key="normal" title="button"/>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuf-eO-Kmp">
+                                <rect key="frame" x="40" y="457" width="295" height="54"/>
+                                <state key="normal" title="button"/>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDI-xW-0CP">
+                                <rect key="frame" x="40" y="527" width="295" height="55"/>
+                                <state key="normal" title="button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HDI-xW-0CP" firstAttribute="top" secondItem="xuf-eO-Kmp" secondAttribute="bottom" constant="16" id="4Rs-vG-jJh"/>
+                            <constraint firstItem="95U-ZK-UxK" firstAttribute="trailing" secondItem="3hq-5p-C4H" secondAttribute="trailing" constant="40" id="5be-hE-pLg"/>
+                            <constraint firstItem="3hq-5p-C4H" firstAttribute="leading" secondItem="95U-ZK-UxK" secondAttribute="leading" constant="40" id="8X8-ra-T4i"/>
+                            <constraint firstItem="tjn-V9-DV1" firstAttribute="top" secondItem="vW9-4Q-UMu" secondAttribute="bottom" constant="16" id="FMg-yQ-ohR"/>
+                            <constraint firstItem="95U-ZK-UxK" firstAttribute="bottom" secondItem="HDI-xW-0CP" secondAttribute="bottom" constant="85" id="Fdl-nM-omZ"/>
+                            <constraint firstItem="Xho-Hr-UOi" firstAttribute="top" secondItem="ure-lZ-CW6" secondAttribute="bottom" constant="16" id="HMI-Zp-oEs"/>
+                            <constraint firstItem="95U-ZK-UxK" firstAttribute="trailing" secondItem="vW9-4Q-UMu" secondAttribute="trailing" constant="40" id="M7h-kX-ZAT"/>
+                            <constraint firstItem="95U-ZK-UxK" firstAttribute="trailing" secondItem="tjn-V9-DV1" secondAttribute="trailing" constant="40" id="MQO-rA-vZJ"/>
+                            <constraint firstItem="Xho-Hr-UOi" firstAttribute="height" secondItem="ure-lZ-CW6" secondAttribute="height" id="OJm-mb-RKn"/>
+                            <constraint firstItem="3hq-5p-C4H" firstAttribute="top" secondItem="Xho-Hr-UOi" secondAttribute="bottom" constant="16" id="RHs-Ae-Tko"/>
+                            <constraint firstItem="3hq-5p-C4H" firstAttribute="height" secondItem="ure-lZ-CW6" secondAttribute="height" id="SaB-4x-VMG"/>
+                            <constraint firstItem="95U-ZK-UxK" firstAttribute="trailing" secondItem="ure-lZ-CW6" secondAttribute="trailing" constant="40" id="Uqh-VP-hrz"/>
+                            <constraint firstItem="xuf-eO-Kmp" firstAttribute="height" secondItem="ure-lZ-CW6" secondAttribute="height" id="W0s-so-9fS"/>
+                            <constraint firstItem="HDI-xW-0CP" firstAttribute="height" secondItem="ure-lZ-CW6" secondAttribute="height" id="YEW-Zt-Bka"/>
+                            <constraint firstItem="xuf-eO-Kmp" firstAttribute="top" secondItem="tjn-V9-DV1" secondAttribute="bottom" constant="16" id="aWJ-6y-iBi"/>
+                            <constraint firstItem="HDI-xW-0CP" firstAttribute="leading" secondItem="95U-ZK-UxK" secondAttribute="leading" constant="40" id="bF9-3V-n0m"/>
+                            <constraint firstItem="95U-ZK-UxK" firstAttribute="trailing" secondItem="xuf-eO-Kmp" secondAttribute="trailing" constant="40" id="dde-qg-0oA"/>
+                            <constraint firstItem="tjn-V9-DV1" firstAttribute="leading" secondItem="95U-ZK-UxK" secondAttribute="leading" constant="40" id="e0p-pl-iqg"/>
+                            <constraint firstItem="ure-lZ-CW6" firstAttribute="leading" secondItem="95U-ZK-UxK" secondAttribute="leading" constant="40" id="eND-AT-BFv"/>
+                            <constraint firstItem="vW9-4Q-UMu" firstAttribute="height" secondItem="ure-lZ-CW6" secondAttribute="height" id="h9y-1t-pla"/>
+                            <constraint firstItem="tjn-V9-DV1" firstAttribute="height" secondItem="ure-lZ-CW6" secondAttribute="height" id="hXh-Vy-MOm"/>
+                            <constraint firstItem="Xho-Hr-UOi" firstAttribute="leading" secondItem="95U-ZK-UxK" secondAttribute="leading" constant="40" id="iSv-4s-Ugn"/>
+                            <constraint firstItem="vW9-4Q-UMu" firstAttribute="top" secondItem="3hq-5p-C4H" secondAttribute="bottom" constant="16" id="ifk-vc-z5A"/>
+                            <constraint firstItem="xuf-eO-Kmp" firstAttribute="leading" secondItem="95U-ZK-UxK" secondAttribute="leading" constant="40" id="kjO-yF-KoL"/>
+                            <constraint firstItem="ure-lZ-CW6" firstAttribute="top" secondItem="95U-ZK-UxK" secondAttribute="top" constant="40" id="t4b-Sm-yoS"/>
+                            <constraint firstItem="95U-ZK-UxK" firstAttribute="trailing" secondItem="HDI-xW-0CP" secondAttribute="trailing" constant="40" id="wvf-fR-neY"/>
+                            <constraint firstItem="vW9-4Q-UMu" firstAttribute="leading" secondItem="95U-ZK-UxK" secondAttribute="leading" constant="40" id="xKI-s5-F0h"/>
+                            <constraint firstItem="95U-ZK-UxK" firstAttribute="trailing" secondItem="Xho-Hr-UOi" secondAttribute="trailing" constant="40" id="xpF-D7-1eY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="95U-ZK-UxK"/>
                     </view>
                 </viewController>
