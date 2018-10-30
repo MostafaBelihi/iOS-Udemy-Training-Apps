@@ -8,7 +8,12 @@
 
 import UIKit
 
+// Item details (PList item)
+var details = [String]();
+
 class WorkoutsViewController: UIViewController {
+	
+	var workoutDict = [String:[String]]();
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +29,9 @@ class WorkoutsViewController: UIViewController {
 			
 			if let validDict = dict
 			{
+				// Catching the doctionary once validated
+				workoutDict = validDict as! [String:[String]];
+				
 				// Extracting dictionary in an array
 				let titles = validDict.allKeys;
 
@@ -49,9 +57,25 @@ class WorkoutsViewController: UIViewController {
 						control.layer.borderWidth = 1.5;
 						control.layer.cornerRadius = 5;
 						control.clipsToBounds = true;
+						
+						// Registering an event (action) for the button
+						control.addTarget(self, action: #selector(WorkoutsViewController.goToDetails(sender:)), for: .touchUpInside);
 					}
 				}
 			}
 		}
     }
+	
+	// Event habdler for buttons
+	@objc func goToDetails(sender: UIButton)
+	{
+		// Note: Button title is the dict key
+		if let title = sender.titleLabel?.text, let items = workoutDict[title]
+		{
+			// Present next view
+			details = items;
+			performSegue(withIdentifier: "details", sender: self);
+		}
+	}
+	
 }

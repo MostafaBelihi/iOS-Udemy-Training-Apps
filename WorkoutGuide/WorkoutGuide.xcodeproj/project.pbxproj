@@ -15,6 +15,7 @@
 		06DED6C72188403A0036A2A5 /* Workouts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06DED6C62188403A0036A2A5 /* Workouts.plist */; };
 		06DED6C9218872190036A2A5 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DED6C8218872190036A2A5 /* WorkoutsViewController.swift */; };
 		06DED6CB2188779B0036A2A5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DED6CA2188779B0036A2A5 /* CustomButton.swift */; };
+		06DED6CD2188B33F0036A2A5 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DED6CC2188B33F0036A2A5 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		06DED6C62188403A0036A2A5 /* Workouts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Workouts.plist; sourceTree = "<group>"; };
 		06DED6C8218872190036A2A5 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		06DED6CA2188779B0036A2A5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		06DED6CC2188B33F0036A2A5 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				06DED6C62188403A0036A2A5 /* Workouts.plist */,
 				06DED6C8218872190036A2A5 /* WorkoutsViewController.swift */,
 				06DED6CA2188779B0036A2A5 /* CustomButton.swift */,
+				06DED6CC2188B33F0036A2A5 /* DetailsViewController.swift */,
 			);
 			path = WorkoutGuide;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				0681F98B2181C416003CF0AA /* ViewController.swift in Sources */,
 				0681F9892181C416003CF0AA /* AppDelegate.swift in Sources */,
 				06DED6C9218872190036A2A5 /* WorkoutsViewController.swift in Sources */,
+				06DED6CD2188B33F0036A2A5 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
