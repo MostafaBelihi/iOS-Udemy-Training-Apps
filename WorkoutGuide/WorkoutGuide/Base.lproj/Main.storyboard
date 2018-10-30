@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="1148" y="-564.46776611694156"/>
         </scene>
-        <!--View Controller-->
+        <!--Workouts View Controller-->
         <scene sceneID="DCO-7W-htW">
             <objects>
-                <viewController id="CB7-VG-37d" sceneMemberID="viewController">
+                <viewController id="CB7-VG-37d" customClass="WorkoutsViewController" customModule="WorkoutGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k6p-wc-0z2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
