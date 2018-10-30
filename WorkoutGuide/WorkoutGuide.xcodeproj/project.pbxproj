@@ -14,6 +14,7 @@
 		0681F9932181C418003CF0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0681F9912181C418003CF0AA /* LaunchScreen.storyboard */; };
 		06DED6C72188403A0036A2A5 /* Workouts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06DED6C62188403A0036A2A5 /* Workouts.plist */; };
 		06DED6C9218872190036A2A5 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DED6C8218872190036A2A5 /* WorkoutsViewController.swift */; };
+		06DED6CB2188779B0036A2A5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DED6CA2188779B0036A2A5 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0681F9942181C418003CF0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06DED6C62188403A0036A2A5 /* Workouts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Workouts.plist; sourceTree = "<group>"; };
 		06DED6C8218872190036A2A5 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
+		06DED6CA2188779B0036A2A5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				0681F9942181C418003CF0AA /* Info.plist */,
 				06DED6C62188403A0036A2A5 /* Workouts.plist */,
 				06DED6C8218872190036A2A5 /* WorkoutsViewController.swift */,
+				06DED6CA2188779B0036A2A5 /* CustomButton.swift */,
 			);
 			path = WorkoutGuide;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06DED6CB2188779B0036A2A5 /* CustomButton.swift in Sources */,
 				0681F98B2181C416003CF0AA /* ViewController.swift in Sources */,
 				0681F9892181C416003CF0AA /* AppDelegate.swift in Sources */,
 				06DED6C9218872190036A2A5 /* WorkoutsViewController.swift in Sources */,

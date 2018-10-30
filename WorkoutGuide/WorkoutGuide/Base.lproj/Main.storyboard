@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="JkO-5i-zj7">
                                 <rect key="frame" x="67" y="104" width="240" height="229"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-FA-adh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-FA-adh" customClass="CustomButton" customModule="WorkoutGuide" customModuleProvider="target">
                                 <rect key="frame" x="40" y="376" width="295" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="pdo-BB-bOO"/>
@@ -31,7 +31,7 @@
                                     <segue destination="CB7-VG-37d" kind="show" id="YzV-M3-lix"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dT-5L-Akg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dT-5L-Akg" customClass="CustomButton" customModule="WorkoutGuide" customModuleProvider="target">
                                 <rect key="frame" x="40" y="446" width="295" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="aQM-hZ-ILj"/>
@@ -41,14 +41,14 @@
                                     <segue destination="Xwa-a8-eiv" kind="show" id="o6d-W4-Gtt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAq-gd-Ihz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAq-gd-Ihz" customClass="CustomButton" customModule="WorkoutGuide" customModuleProvider="target">
                                 <rect key="frame" x="40" y="517" width="295" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="RCe-GW-7eJ"/>
                                 </constraints>
                                 <state key="normal" title="SETTINGS"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhy-QV-fkr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhy-QV-fkr" customClass="CustomButton" customModule="WorkoutGuide" customModuleProvider="target">
                                 <rect key="frame" x="40" y="587" width="295" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="uOv-8q-9dK"/>
