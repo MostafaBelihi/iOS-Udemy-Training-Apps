@@ -78,4 +78,10 @@ class WorkoutsViewController: UIViewController {
 		}
 	}
 	
+	// Unwind Sqgue
+	@IBAction func close(segue: UIStoryboardSegue)
+	{
+		
+	}
+	
 }
