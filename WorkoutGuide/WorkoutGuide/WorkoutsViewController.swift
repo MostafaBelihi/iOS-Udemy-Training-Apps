@@ -14,57 +14,49 @@ var details = [String]();
 class WorkoutsViewController: UIViewController {
 	
 	var workoutDict = [String:[String]]();
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		
 		self.title = "Choose Workout";
 		
-		// Path to the PList file
-		let path = Bundle.main.path(forResource: "Workouts", ofType: "plist");
+		// Get PList data
+		let workoutPlist = appDelegate.getWorkoutsPlist();
 		
-		if let validPath = path
+		// Catching the doctionary
+		workoutDict = workoutPlist as! [String:[String]];
+		
+		// Extracting dictionary in an array
+		let titles = workoutPlist.allKeys;
+		
+		/// Accessing all buttons
+		let allViews = view.subviews;
+		
+		for i in 0..<allViews.count
 		{
-			let dict = NSDictionary(contentsOfFile: validPath);
-			
-			if let validDict = dict
+			if allViews[i].tag == 10 //is Button
+				// 'is' here checks the class of the view (distinguish controls by type)
+				// tag is used to distinguish specific controls
 			{
-				// Catching the doctionary once validated
-				workoutDict = validDict as! [String:[String]];
+				// Accessing the control
+				let control = allViews[i] as! UIButton		// I know it's a button
 				
-				// Extracting dictionary in an array
-				let titles = validDict.allKeys;
-
-				/// Accessing all buttons
-				let allViews = view.subviews;
+				// Button title
+				control.setTitle(titles[i] as? String, for: .normal);
 				
-				for i in 0..<allViews.count
-				{
-					if allViews[i].tag == 10 //is Button
-						// 'is' here checks the class of the view (distinguish controls by type)
-						// tag is used to distinguish specific controls
-					{
-						// Accessing the control
-						let control = allViews[i] as! UIButton		// I know it's a button
-						
-						// Button title
-						control.setTitle(titles[i] as? String, for: .normal);
-						
-						// Styling
-						control.setTitleColor(appColor, for: .normal);
-						control.titleLabel?.font = UIFont(name: "HelveticaNeue-CondensedBlack", size: 20);
-						control.layer.borderColor = appColor.cgColor;
-						control.layer.borderWidth = 1.5;
-						control.layer.cornerRadius = 5;
-						control.clipsToBounds = true;
-						
-						// Registering an event (action) for the button
-						control.addTarget(self, action: #selector(WorkoutsViewController.goToDetails(sender:)), for: .touchUpInside);
-					}
-				}
+				// Styling
+				control.setTitleColor(appColor, for: .normal);
+				control.titleLabel?.font = UIFont(name: "HelveticaNeue-CondensedBlack", size: 20);
+				control.layer.borderColor = appColor.cgColor;
+				control.layer.borderWidth = 1.5;
+				control.layer.cornerRadius = 5;
+				control.clipsToBounds = true;
+				
+				// Registering an event (action) for the button
+				control.addTarget(self, action: #selector(WorkoutsViewController.goToDetails(sender:)), for: .touchUpInside);
 			}
 		}
-    }
+	}
 	
 	// Event habdler for buttons
 	@objc func goToDetails(sender: UIButton)
