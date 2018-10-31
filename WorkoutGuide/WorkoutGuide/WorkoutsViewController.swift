@@ -70,7 +70,7 @@ class WorkoutsViewController: UIViewController {
 		}
 	}
 	
-	// Unwind Sqgue
+	// Unwind Segue
 	@IBAction func close(segue: UIStoryboardSegue)
 	{
 		
