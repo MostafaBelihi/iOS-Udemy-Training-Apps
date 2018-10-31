@@ -14,3 +14,5 @@ let themeBackgroundColor = UIColor(red:0.36, green:0.63, blue:0.86, alpha:1.00);
 let themePrimaryColor = UIColor.black;
 let themeSecondaryColor = UIColor.white;
 let themeHeadingFont = UIFont(name: "HelveticaNeue-CondensedBlack", size: 20);
+let themeButtonFont = UIFont(name: "HelveticaNeue-CondensedBold", size: 20);
+

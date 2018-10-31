@@ -76,7 +76,7 @@
                                     <segue destination="ASX-bX-SqB" kind="unwind" unwindAction="closeWithSegue:" id="LoG-MW-2cO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT TASK AND DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkF-Hn-AYe">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT TASK AND DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkF-Hn-AYe">
                                 <rect key="frame" x="91" y="29" width="192" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="afi-aZ-tga"/>
@@ -85,21 +85,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKk-vh-XPU">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKk-vh-XPU">
                                 <rect key="frame" x="28" y="600" width="319" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="nco-k9-bc3"/>
                                 </constraints>
                                 <state key="normal" title="Add Task"/>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcI-Hr-2kR">
+                                <rect key="frame" x="0.0" y="76" width="375" height="216"/>
+                            </pickerView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iC0-9h-Rfk">
+                                <rect key="frame" x="0.0" y="300" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="562690377.37556899">
+                                    <!--2018-10-31 14:52:57 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VmK-Kh-KA2" firstAttribute="trailing" secondItem="gKk-vh-XPU" secondAttribute="trailing" constant="28" id="0Qm-8t-8ad"/>
                             <constraint firstItem="gkF-Hn-AYe" firstAttribute="top" secondItem="VmK-Kh-KA2" secondAttribute="top" constant="9" id="1l7-0h-mDI"/>
+                            <constraint firstItem="iC0-9h-Rfk" firstAttribute="trailing" secondItem="VmK-Kh-KA2" secondAttribute="trailing" id="GZF-jb-gkD"/>
                             <constraint firstItem="VmK-Kh-KA2" firstAttribute="bottom" secondItem="gKk-vh-XPU" secondAttribute="bottom" constant="20" id="IwT-fc-ffx"/>
+                            <constraint firstItem="iC0-9h-Rfk" firstAttribute="top" secondItem="XdO-gA-XWf" secondAttribute="bottom" constant="250" id="L9O-Og-kIx"/>
+                            <constraint firstItem="VcI-Hr-2kR" firstAttribute="top" secondItem="XdO-gA-XWf" secondAttribute="bottom" constant="26" id="OaX-H9-8tF"/>
                             <constraint firstItem="XdO-gA-XWf" firstAttribute="leading" secondItem="VmK-Kh-KA2" secondAttribute="leading" constant="16" id="UcK-HJ-TGN"/>
                             <constraint firstItem="XdO-gA-XWf" firstAttribute="top" secondItem="VmK-Kh-KA2" secondAttribute="top" id="gTY-T2-5st"/>
+                            <constraint firstItem="iC0-9h-Rfk" firstAttribute="leading" secondItem="VmK-Kh-KA2" secondAttribute="leading" id="hSg-2b-JD9"/>
+                            <constraint firstItem="VcI-Hr-2kR" firstAttribute="leading" secondItem="VmK-Kh-KA2" secondAttribute="leading" id="jSc-ga-tOJ"/>
+                            <constraint firstItem="VcI-Hr-2kR" firstAttribute="trailing" secondItem="VmK-Kh-KA2" secondAttribute="trailing" id="mpE-6b-B8l"/>
                             <constraint firstItem="gKk-vh-XPU" firstAttribute="leading" secondItem="VmK-Kh-KA2" secondAttribute="leading" constant="28" id="wD4-Vr-XVd"/>
                             <constraint firstItem="gkF-Hn-AYe" firstAttribute="centerX" secondItem="GYV-dh-ol8" secondAttribute="centerX" id="y0O-Lt-mpJ"/>
                         </constraints>

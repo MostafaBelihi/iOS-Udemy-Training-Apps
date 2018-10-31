@@ -37,6 +37,23 @@ class AddTaskViewController: UIViewController {
 				
 				control.setTitleColor(themeSecondaryColor, for: .normal);
 			}
+			
+			// Header label
+			if subView.tag == 1 {
+				let control = subView as! UILabel;
+				
+				control.font = themeHeadingFont;
+			}
+
+			// Add Button
+			if subView.tag == 2 {
+				let control = subView as! UIButton;
+				
+				control.backgroundColor = themePrimaryColor;
+				control.titleLabel?.font = themeButtonFont;
+				control.layer.cornerRadius = 1.0;
+				control.clipsToBounds = true;
+			}
 		}
 	}
 
