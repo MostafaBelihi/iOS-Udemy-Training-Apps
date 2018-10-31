@@ -8,19 +8,48 @@
 
 import UIKit
 
-class AddTaskViewController: UIViewController {
-
+class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+	
+	@IBOutlet weak var taskPicker: UIPickerView!
+	
+	var tasks = [
+		"Select task",
+		"Pro Tip",
+		"Coding Practice",
+		"Special",
+		"Important",
+		"Error Rescue",
+		"Secret Tools",
+		"Advanced",
+		"Topic to Follow"
+		];
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		// Adopt PickerView protocols
+		taskPicker.dataSource = self;
+		taskPicker.delegate = self;
 
 		applyTheme();
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+	
+	/// PickerView
+	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+		return tasks.count;
+	}
+	
+	func numberOfComponents(in pickerView: UIPickerView) -> Int {
+		return 1;
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		return tasks[row];
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		
+	}
 
 	// Theme
 	func applyTheme() {
