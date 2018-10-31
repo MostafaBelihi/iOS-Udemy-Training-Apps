@@ -51,9 +51,9 @@ class WorkoutsViewController: UIViewController {
 						control.setTitle(titles[i] as? String, for: .normal);
 						
 						// Styling
-						control.setTitleColor(UIColor(red: 0.99, green: 0.29, blue: 0.34, alpha: 1.00), for: .normal);
+						control.setTitleColor(appColor, for: .normal);
 						control.titleLabel?.font = UIFont(name: "HelveticaNeue-CondensedBlack", size: 20);
-						control.layer.borderColor = UIColor(red: 0.99, green: 0.29, blue: 0.34, alpha: 1.00).cgColor;
+						control.layer.borderColor = appColor.cgColor;
 						control.layer.borderWidth = 1.5;
 						control.layer.cornerRadius = 5;
 						control.clipsToBounds = true;

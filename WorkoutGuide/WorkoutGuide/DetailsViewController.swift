@@ -26,9 +26,9 @@ class DetailsViewController: UIViewController {
 		descrText.text = text;
 		
 		// Styling
-		self.view.backgroundColor = UIColor(red: 0.99, green: 0.29, blue: 0.34, alpha: 1.00);
+		self.view.backgroundColor = appColor;
 		imgView.layer.borderWidth = 4;
-		imgView.layer.borderColor = UIColor(red: 0.99, green: 0.29, blue: 0.34, alpha: 1.00).cgColor;
+		imgView.layer.borderColor = appColor.cgColor;
 		descrText.textColor = UIColor.white;
 		descrText.font = UIFont(name: "AvenirNext-Regular ", size: 21);
 		closeBtn.setTitleColor(UIColor.white, for: .normal);
