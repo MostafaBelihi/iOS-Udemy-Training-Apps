@@ -11,8 +11,9 @@ import UIKit
 class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 	
 	@IBOutlet weak var taskPicker: UIPickerView!
+	@IBOutlet weak var addTaskButton: UIButton!
 	
-	var tasks = [
+	var allTasks = [
 		"Select task",
 		"Pro Tip",
 		"Coding Practice",
@@ -30,13 +31,15 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		// Adopt PickerView protocols
 		taskPicker.dataSource = self;
 		taskPicker.delegate = self;
+		
+		addTaskButton.isEnabled = false;
 
 		applyTheme();
     }
 	
 	/// PickerView
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-		return tasks.count;
+		return allTasks.count;
 	}
 	
 	func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -44,11 +47,16 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		return tasks[row];
+		return allTasks[row];
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-		
+		if row == 0 {
+			addTaskButton.isEnabled = false;
+		}
+		else {
+			addTaskButton.isEnabled = true;
+		}
 	}
 
 	// Theme

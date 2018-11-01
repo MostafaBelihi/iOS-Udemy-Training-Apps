@@ -8,6 +8,9 @@
 
 import UIKit
 
+var tasks = [String]();
+var dates = [String]();
+
 class ViewController: UIViewController {
 	
 	override func viewDidLoad() {

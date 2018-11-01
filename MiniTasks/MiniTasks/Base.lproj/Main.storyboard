@@ -121,6 +121,7 @@
                         <viewLayoutGuide key="safeArea" id="VmK-Kh-KA2"/>
                     </view>
                     <connections>
+                        <outlet property="addTaskButton" destination="gKk-vh-XPU" id="nZg-Bb-Fks"/>
                         <outlet property="taskPicker" destination="VcI-Hr-2kR" id="GDj-kn-tcR"/>
                     </connections>
                 </viewController>
