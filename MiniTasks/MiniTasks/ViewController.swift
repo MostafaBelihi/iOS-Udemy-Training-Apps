@@ -34,7 +34,8 @@ class ViewController: UIViewController, UITableViewDataSource {
 		// Gets a recently hidden cell in display (with scrolling) to be reused for new cell
 		let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath);
 		
-		cell.textLabel?.text = tasks[indexPath.row];
+		cell.textLabel?.text = "\(indexPath.row + 1). \(tasks[indexPath.row])";
+		cell.detailTextLabel?.text = dates[indexPath.row];
 		
 		return cell;
 	}
