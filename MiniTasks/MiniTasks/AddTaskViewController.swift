@@ -12,6 +12,7 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	
 	@IBOutlet weak var taskPicker: UIPickerView!
 	@IBOutlet weak var addTaskButton: UIButton!
+	@IBOutlet weak var datePicker: UIDatePicker!
 	
 	var allTasks = [
 		"Select task",
@@ -25,6 +26,8 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		"Topic to Follow"
 		];
 	
+	var dateFormatter = DateFormatter();
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -32,10 +35,26 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		taskPicker.dataSource = self;
 		taskPicker.delegate = self;
 		
+		// Button is disabled by default
 		addTaskButton.isEnabled = false;
+		
+		// Date format
+		dateFormatter.dateFormat = "dd/MM/yyyy HH:mm";
+		
+		// Minimum date
+		datePicker.minimumDate = Date();
 
 		applyTheme();
     }
+	
+	@IBAction func addClicked(_ sender: Any) {
+		// Add new
+		tasks.append(allTasks[taskPicker.selectedRow(inComponent: 0)]);
+		dates.append(dateFormatter.string(from: datePicker.date));
+		
+		// Close view
+		dismiss(animated: true, completion: nil)
+	}
 	
 	/// PickerView
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
