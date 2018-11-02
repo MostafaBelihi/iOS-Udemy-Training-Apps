@@ -29,6 +29,20 @@
                                     <segment title="Deleted"/>
                                 </segments>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9gE-x9-QQ1">
+                                <rect key="frame" x="16" y="124" width="343" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="IhB-Rg-Hmv">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IhB-Rg-Hmv" id="9KO-AZ-DE1">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoK-mZ-FVg">
                                 <rect key="frame" x="162" y="597" width="50" height="50"/>
                                 <constraints>
@@ -43,15 +57,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9gE-x9-QQ1" secondAttribute="trailing" constant="16" id="42L-9m-bAb"/>
                             <constraint firstItem="3tQ-dZ-oTu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7FL-sU-6tE"/>
+                            <constraint firstItem="9gE-x9-QQ1" firstAttribute="top" secondItem="3tQ-dZ-oTu" secondAttribute="bottom" constant="20" id="DaJ-R5-Ixm"/>
                             <constraint firstItem="XoK-mZ-FVg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PJq-kd-1Zh"/>
+                            <constraint firstItem="9gE-x9-QQ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SLp-y3-Kyf"/>
                             <constraint firstItem="3tQ-dZ-oTu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="U3D-Xu-LgP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9gE-x9-QQ1" secondAttribute="bottom" constant="20" id="gRM-T1-3gI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XoK-mZ-FVg" secondAttribute="bottom" constant="20" id="ixR-e7-sXN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tQ-dZ-oTu" secondAttribute="trailing" constant="16" id="sLc-v8-RLP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mini Tasks" id="6Qs-pD-oj4"/>
+                    <connections>
+                        <outlet property="tableView" destination="9gE-x9-QQ1" id="XqP-hc-256"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,6 +92,7 @@
                                     <constraint firstAttribute="width" constant="30" id="TfH-I4-M7l"/>
                                     <constraint firstAttribute="height" constant="30" id="epN-jg-bw2"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="X"/>
                                 <connections>
                                     <segue destination="ASX-bX-SqB" kind="unwind" unwindAction="closeWithSegue:" id="LoG-MW-2cO"/>

@@ -11,17 +11,36 @@ import UIKit
 var tasks = [String]();
 var dates = [String]();
 
-class ViewController: UIViewController {
-	
+class ViewController: UIViewController, UITableViewDataSource {
+
+	@IBOutlet weak var tableView: UITableView!
+		
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		// Adopt protocols
+		tableView.dataSource = self;
+		
 		applyTheme();
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	
+	override func viewWillAppear(_ animated: Bool) {
+		// Refresh TableView
+		tableView.reloadData();
+	}
+	
+	/// TableView
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		// Gets a recently hidden cell in display (with scrolling) to be reused for new cell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath);
+		
+		cell.textLabel?.text = tasks[indexPath.row];
+		
+		return cell;
+	}
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return tasks.count;
 	}
 
 	// Unwind Segue
