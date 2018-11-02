@@ -107,7 +107,9 @@ class AddTaskViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 				
 				control.backgroundColor = themePrimaryColor;
 				control.titleLabel?.font = themeButtonFont;
-				control.layer.cornerRadius = 1.0;
+				control.layer.cornerRadius = 5;
+				control.layer.borderColor = themeSecondaryColor.cgColor;
+				control.layer.borderWidth = 1.0;
 				control.clipsToBounds = true;
 			}
 		}
