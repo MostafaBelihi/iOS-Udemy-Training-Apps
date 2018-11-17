@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddCarViewController: UIViewController, UITextFieldDelegate {
+class AddCarViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	@IBOutlet weak var txtCarName: UITextField!
 	@IBOutlet weak var imgCarImage: UIImageView!
@@ -40,7 +40,13 @@ class AddCarViewController: UIViewController, UITextFieldDelegate {
 		return true;
 	}
 
+	// Preparing and presenting image picker
 	@IBAction func selectCar(_ sender: Any) {
+		let photoPicker = UIImagePickerController();
+		photoPicker.delegate = self;
+		photoPicker.allowsEditing = true;	// to crop the image
+		
+		present(photoPicker, animated: true);
 	}
 	
 	@IBAction func save(_ sender: Any) {
