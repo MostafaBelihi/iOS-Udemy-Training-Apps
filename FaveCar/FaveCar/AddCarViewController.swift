@@ -39,6 +39,21 @@ class AddCarViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 		
 		return true;
 	}
+	
+	// Acting after the image is picked and in edited
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+		// Unwrapping edited image
+		// You can use UIImagePickerControllerOriginalImage here instead of UIImagePickerControllerEditedImage
+		// 	if you want the image before being edited. This can be useful if you do not allow esiting
+		if let selectedImage = info[UIImagePickerControllerEditedImage] as? UIImage
+		{
+			// Loading image in ImageView
+			imgCarImage.image = selectedImage;
+		}
+		
+		// Closing image picker
+		dismiss(animated: true);
+	}
 
 	// Preparing and presenting image picker
 	@IBAction func selectCar(_ sender: Any) {
