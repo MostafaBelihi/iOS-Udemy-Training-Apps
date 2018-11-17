@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddCarViewController: UIViewController {
+class AddCarViewController: UIViewController, UITextFieldDelegate {
 
 	@IBOutlet weak var txtCarName: UITextField!
 	@IBOutlet weak var imgCarImage: UIImageView!
@@ -17,9 +17,19 @@ class AddCarViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		// This class implements delegates for the UITextField
+		txtCarName.delegate = self;
 
         // Do any additional setup after loading the view.
     }
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		// Dismisses keyboard from rhe text field
+		txtCarName.resignFirstResponder();
+		
+		return true;
+	}
 
 	@IBAction func selectCar(_ sender: Any) {
 	}
