@@ -30,6 +30,15 @@ class AddCarViewController: UIViewController, UITextFieldDelegate {
 		
 		return true;
 	}
+	
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		if let length = textField.text?.characters.count
+		{
+			lblCharacterCount.text = "\(length + 1) characters";
+		}
+		
+		return true;
+	}
 
 	@IBAction func selectCar(_ sender: Any) {
 	}
