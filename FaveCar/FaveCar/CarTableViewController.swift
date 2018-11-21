@@ -34,7 +34,18 @@ class CarTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+	@IBAction func load(_ sender: Any) {
+		// Preload table view
+		for i in 0...4
+		{
+			names.append("Car \(i + 1)");
+			images.append(UIImage(named: "car\(i + 1)")!);
+		}
+		
+		tableView.reloadData();
+	}
+	
+	// MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

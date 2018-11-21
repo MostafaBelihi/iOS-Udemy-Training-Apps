@@ -20,10 +20,12 @@ class AddCarViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		self.title = "ADD NEW CAR";
+		
 		// This class implements delegates for the UITextField
 		txtCarName.delegate = self;
 
-        // Tweaking UI	
+        // Tweaking UI
 		txtCarName.layer.cornerRadius = 10;
 		btnSelectCar.layer.cornerRadius = 10;
     }
