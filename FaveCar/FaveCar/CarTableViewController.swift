@@ -22,6 +22,12 @@ class CarTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated);
+		
+		tableView.reloadData();
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,10 +46,33 @@ class CarTableViewController: UITableViewController {
 
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "carCell", for: indexPath)
 
-        // Configure the cell...
+		let imgCar = cell.viewWithTag(10) as! UIImageView;
+		imgCar.image = images[indexPath.row];
+		imgCar.layer.cornerRadius = 10;
+		imgCar.clipsToBounds = true;
 
+		let lblBack = cell.viewWithTag(11) as! UILabel;
+		lblBack.layer.cornerRadius = 10;
+		lblBack.layer.borderColor = UIColor.darkGray.cgColor;
+		lblBack.layer.borderWidth = 3;
+		lblBack.clipsToBounds = true;
+		
+		let lblNumber = cell.viewWithTag(12) as! UILabel;
+		lblNumber.layer.cornerRadius = 17.5;
+		lblNumber.layer.borderColor = UIColor.black.cgColor;
+		lblNumber.layer.borderWidth = 3;
+		lblNumber.clipsToBounds = true;
+		lblNumber.text = "\(indexPath.row + 1)";
+		
+		let lblTitle = cell.viewWithTag(13) as! UILabel;
+		lblTitle.layer.cornerRadius = 10;
+		lblTitle.layer.borderColor = UIColor.darkGray.cgColor;
+		lblTitle.layer.borderWidth = 3;
+		lblTitle.clipsToBounds = true;
+		lblTitle.text = names[indexPath.row];
+		
         return cell
     }
     
