@@ -23,7 +23,9 @@ class AddCarViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 		// This class implements delegates for the UITextField
 		txtCarName.delegate = self;
 
-        // Do any additional setup after loading the view.
+        // Tweaking UI	
+		txtCarName.layer.cornerRadius = 10;
+		btnSelectCar.layer.cornerRadius = 10;
     }
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
