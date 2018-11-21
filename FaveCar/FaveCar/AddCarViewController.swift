@@ -52,7 +52,7 @@ class AddCarViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 			// Loading image in ImageView
 			imagePicked = true;
 			imgCarImage.image = selectedImage;
-			images.append(selectedImage);
+			images.insert(selectedImage, at: 0);
 		}
 		
 		// Closing image picker
@@ -85,7 +85,12 @@ class AddCarViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 		// Save data
 		if let value = txtCarName.text
 		{
-			names.append(value);
+			names.insert(value, at: 0);
+			
+			if let navController = navigationController
+			{
+				navController.popViewController(animated: true);
+			}
 		}
 	}
 	
