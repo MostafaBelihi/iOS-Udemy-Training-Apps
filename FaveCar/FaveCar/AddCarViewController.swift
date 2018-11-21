@@ -15,6 +15,8 @@ class AddCarViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 	@IBOutlet weak var btnSelectCar: UIButton!
 	@IBOutlet weak var lblCharacterCount: UILabel!
 	
+	var imagePicked = false;	// validation
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -48,7 +50,9 @@ class AddCarViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 		if let selectedImage = info[UIImagePickerControllerEditedImage] as? UIImage
 		{
 			// Loading image in ImageView
+			imagePicked = true;
 			imgCarImage.image = selectedImage;
+			images.append(selectedImage);
 		}
 		
 		// Closing image picker
@@ -65,6 +69,24 @@ class AddCarViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 	}
 	
 	@IBAction func save(_ sender: Any) {
+		// Validation
+		if !imagePicked
+		{
+			print("No image");
+			return;
+		}
+
+		if (txtCarName.text?.isEmpty)!
+		{
+			print("No name");
+			return;
+		}
+		
+		// Save data
+		if let value = txtCarName.text
+		{
+			names.append(value);
+		}
 	}
 	
 }
