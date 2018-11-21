@@ -87,6 +87,7 @@ class AddCarViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 		{
 			names.insert(value, at: 0);
 			
+			// Pop last view
 			if let navController = navigationController
 			{
 				navController.popViewController(animated: true);
