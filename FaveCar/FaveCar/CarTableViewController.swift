@@ -75,6 +75,12 @@ class CarTableViewController: UITableViewController {
 		
 		performSegue(withIdentifier: "identifier", sender: self);
 	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if let myIndexPath = tableView.indexPathForSelectedRow {
+			name = names[myIndexPath.row];
+		}
+	}
 
     /*
     // Override to support conditional editing of the table view.
