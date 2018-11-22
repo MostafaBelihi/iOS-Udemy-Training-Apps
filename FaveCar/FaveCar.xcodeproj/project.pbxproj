@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061AEFD821A5CE1000EEC338 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061AEFD721A5CE1000EEC338 /* CarTableViewCell.swift */; };
 		068D59C9219AB6F7007A6D5F /* CarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068D59C8219AB6F7007A6D5F /* CarTableViewController.swift */; };
 		068D59CD219ABB4A007A6D5F /* AddCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068D59CC219ABB4A007A6D5F /* AddCarViewController.swift */; };
 		0693BAE32193024E009BC02E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0693BAE22193024E009BC02E /* AppDelegate.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061AEFD721A5CE1000EEC338 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		068D59C8219AB6F7007A6D5F /* CarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewController.swift; sourceTree = "<group>"; };
 		068D59CC219ABB4A007A6D5F /* AddCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCarViewController.swift; sourceTree = "<group>"; };
 		0693BADF2193024E009BC02E /* FaveCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaveCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 				0693BAEE21930250009BC02E /* Info.plist */,
 				068D59C8219AB6F7007A6D5F /* CarTableViewController.swift */,
 				068D59CC219ABB4A007A6D5F /* AddCarViewController.swift */,
+				061AEFD721A5CE1000EEC338 /* CarTableViewCell.swift */,
 			);
 			path = FaveCar;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				068D59CD219ABB4A007A6D5F /* AddCarViewController.swift in Sources */,
 				068D59C9219AB6F7007A6D5F /* CarTableViewController.swift in Sources */,
+				061AEFD821A5CE1000EEC338 /* CarTableViewCell.swift in Sources */,
 				0693BAE32193024E009BC02E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
