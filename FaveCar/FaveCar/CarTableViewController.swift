@@ -12,6 +12,8 @@ var names = [String]();
 var images = [UIImage]();
 
 class CarTableViewController: UITableViewController {
+	
+	var name = "";
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +69,12 @@ class CarTableViewController: UITableViewController {
 		
 		return cell;
     }
-    
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		name = names[indexPath.row];
+		
+		performSegue(withIdentifier: "identifier", sender: self);
+	}
 
     /*
     // Override to support conditional editing of the table view.

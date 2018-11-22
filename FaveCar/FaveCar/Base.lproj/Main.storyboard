@@ -21,21 +21,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="carCell" rowHeight="192" id="lhS-o1-fks" customClass="CarTableViewCell" customModule="FaveCar" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="carCell" rowHeight="192" id="lhS-o1-fks" customClass="CarTableViewCell" customModule="FaveCar" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="192"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lhS-o1-fks" id="3Rs-GK-BIr">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="191.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="191.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqC-2r-nCw">
-                                            <rect key="frame" x="16" y="11" width="343" height="170"/>
+                                            <rect key="frame" x="16" y="11" width="317" height="170"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="170" id="EcV-dP-daN"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFD-AW-EYb">
-                                            <rect key="frame" x="16" y="11" width="343" height="170"/>
+                                            <rect key="frame" x="16" y="11" width="317" height="170"/>
                                             <color key="backgroundColor" name="NumberLabel"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="170" id="4h4-Nr-IIs"/>
@@ -55,7 +55,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnA-Ch-XBa">
-                                            <rect key="frame" x="27" y="136" width="321" height="36"/>
+                                            <rect key="frame" x="27" y="136" width="295" height="36"/>
                                             <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="36" id="xEl-d5-snh"/>
@@ -86,6 +86,7 @@
                                     <outlet property="lblBackground" destination="gFD-AW-EYb" id="MQF-Vj-eWX"/>
                                     <outlet property="lblNumber" destination="v4v-vs-feT" id="aS2-Cx-K4B"/>
                                     <outlet property="lblTitle" destination="jnA-Ch-XBa" id="DJl-Kx-8dD"/>
+                                    <segue destination="CdC-CG-SPn" kind="show" identifier="identifier" trigger="accessoryAction" id="1XQ-c6-Za9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -110,6 +111,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ims-YU-Rkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1024.8" y="148.87556221889056"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="G9a-4X-yDA">
+            <objects>
+                <viewController id="CdC-CG-SPn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="irY-l1-I6m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="s7K-P8-oJU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6C-jc-Gua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="967"/>
         </scene>
         <!--Add Car View Controller-->
         <scene sceneID="Six-XV-3al">
