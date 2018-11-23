@@ -52,12 +52,22 @@ class HomeCollectionViewController: UICollectionViewController, UIImagePickerCon
     }
 
 	@IBAction func openCamera(_ sender: Any) {
-		let picker = UIImagePickerController();
-		picker.sourceType = .camera;
-		picker.allowsEditing = true;
-		picker.delegate = self;
-		
-		present(picker, animated: true);
+		// Launching camera
+		if UIImagePickerController.isSourceTypeAvailable(.camera) {
+			let picker = UIImagePickerController();
+			picker.sourceType = .camera;
+			picker.allowsEditing = true;
+			picker.delegate = self;
+			
+			present(picker, animated: true);
+		}
+		else {
+			let alert = UIAlertController(title: "Camera Unavailable", message: "You do not have a camera on your device!", preferredStyle: .alert);
+			let okAction = UIAlertAction(title: "OK", style: .default, handler: nil);
+			alert.addAction(okAction);
+			
+			present(alert, animated: true, completion: nil);
+		}
 	}
 	
 	// MARK: UICollectionViewDataSource
