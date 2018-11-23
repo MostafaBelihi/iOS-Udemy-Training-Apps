@@ -11,7 +11,7 @@ import UIKit
 var names = [String]();
 var images = [UIImage]();
 
-class HomeCollectionViewController: UICollectionViewController {
+class HomeCollectionViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,16 @@ class HomeCollectionViewController: UICollectionViewController {
 		names.append("Japan");
     }
 
-    // MARK: UICollectionViewDataSource
+	@IBAction func openCamera(_ sender: Any) {
+		let picker = UIImagePickerController();
+		picker.sourceType = .camera;
+		picker.allowsEditing = true;
+		picker.delegate = self;
+		
+		present(picker, animated: true);
+	}
+	
+	// MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 1;
