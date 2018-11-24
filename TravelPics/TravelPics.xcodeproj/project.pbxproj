@@ -13,6 +13,7 @@
 		061AEFF021A7FEEB00EEC338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061AEFEE21A7FEEB00EEC338 /* LaunchScreen.storyboard */; };
 		061AEFF821A82AC100EEC338 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061AEFF721A82AC100EEC338 /* HomeCollectionViewController.swift */; };
 		061AEFFA21A8411400EEC338 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061AEFF921A8411400EEC338 /* MyCollectionViewCell.swift */; };
+		061AEFFC21A91E9E00EEC338 /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061AEFFB21A91E9E00EEC338 /* FullImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		061AEFF121A7FEEB00EEC338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		061AEFF721A82AC100EEC338 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		061AEFF921A8411400EEC338 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		061AEFFB21A91E9E00EEC338 /* FullImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				061AEFF121A7FEEB00EEC338 /* Info.plist */,
 				061AEFF721A82AC100EEC338 /* HomeCollectionViewController.swift */,
 				061AEFF921A8411400EEC338 /* MyCollectionViewCell.swift */,
+				061AEFFB21A91E9E00EEC338 /* FullImageViewController.swift */,
 			);
 			path = TravelPics;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				061AEFE621A7FEE700EEC338 /* AppDelegate.swift in Sources */,
+				061AEFFC21A91E9E00EEC338 /* FullImageViewController.swift in Sources */,
 				061AEFF821A82AC100EEC338 /* HomeCollectionViewController.swift in Sources */,
 				061AEFFA21A8411400EEC338 /* MyCollectionViewCell.swift in Sources */,
 			);

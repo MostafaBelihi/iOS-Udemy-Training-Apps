@@ -94,5 +94,23 @@ class HomeCollectionViewController: UICollectionViewController, UIImagePickerCon
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: (collectionView.frame.size.width / 2) - 10, height: (collectionView.frame.size.width / 2) - 10);
 	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		// VC to launch
+		let destinationVC = segue.destination as! FullImageViewController;
+		
+		// Getting selected image
+		//   Unlike TableView, CollectionView gets an array of selected items
+		if let indexPaths = collectionView?.indexPathsForSelectedItems {
+			let selectedIndexPath = indexPaths[0];		// picking the first item in the array
+			
+			// Assign image to destinationVC
+			destinationVC.fullImage = images[selectedIndexPath.row];
+		}
+	}
+	
+	@IBAction func close(segue: UIStoryboardSegue) {
+		
+	}
 
 }

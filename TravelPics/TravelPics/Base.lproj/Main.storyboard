@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="1183.2" y="145.27736131934034"/>
         </scene>
-        <!--View Controller-->
+        <!--Full Image View Controller-->
         <scene sceneID="uf4-QR-sBM">
             <objects>
-                <viewController id="6HV-65-pmO" sceneMemberID="viewController">
+                <viewController id="6HV-65-pmO" customClass="FullImageViewController" customModule="TravelPics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ueG-VS-MZy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJT-YZ-1mH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U4G-ZV-Ify">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U4G-ZV-Ify">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="667" id="6XX-f0-f3d"/>
@@ -99,6 +99,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="U4G-ZV-Ify" firstAttribute="top" secondItem="zJT-YZ-1mH" secondAttribute="top" id="2te-dD-vQE"/>
                                     <constraint firstAttribute="trailing" secondItem="U4G-ZV-Ify" secondAttribute="trailing" id="PdL-iM-Y0G"/>
@@ -111,9 +112,12 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Jtt-Fx-1cs" kind="unwind" unwindAction="closeWithSegue:" id="eFN-Xu-ruJ"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qzf-Cj-bhw" firstAttribute="leading" secondItem="5dW-cl-wnF" secondAttribute="leading" constant="24" id="2a9-dt-a0D"/>
                             <constraint firstItem="zJT-YZ-1mH" firstAttribute="bottom" secondItem="5dW-cl-wnF" secondAttribute="bottom" id="3dP-r7-Ygr"/>
@@ -125,8 +129,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5dW-cl-wnF"/>
                     </view>
+                    <connections>
+                        <outlet property="imgFullImage" destination="U4G-ZV-Ify" id="afE-hF-QJ2"/>
+                        <outlet property="scrollView" destination="zJT-YZ-1mH" id="ewY-ag-Nq9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfS-Pg-ljd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Jtt-Fx-1cs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2120.8000000000002" y="143.47826086956522"/>
         </scene>
