@@ -11,7 +11,7 @@ import UIKit
 var names = [String]();
 var images = [UIImage]();
 
-class HomeCollectionViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class HomeCollectionViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegateFlowLayout {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,5 +90,9 @@ class HomeCollectionViewController: UICollectionViewController, UIImagePickerCon
     
         return cell
     }
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width: (collectionView.frame.size.width / 2) - 10, height: (collectionView.frame.size.width / 2) - 10);
+	}
 
 }
